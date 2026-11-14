@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@onozis — Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="snow-canvas"></canvas>
+
+    <div id="loader">
+        <div class="loader-bar"><div class="loader-progress" id="progress"></div></div>
+        <div class="loader-text" id="loader-text">ЗАГРУЗКА РЕСУРСОВ... <span id="load-percent">0%</span></div>
+        <div id="enter-site" style="display: none; text-align: center;">
+            <div class="click-prompt">Кликните в любом месте</div>
+            <div class="click-subtext">чтобы попасть на сайт</div>
+        </div>
+    </div>
+
+    <main id="content">
+        <header>
+            <div class="logo">@onozis</div>
+            <nav>
+                <a href="#projects">Проекты</a>
+                <a href="#about">Обо мне</a>
+                <a href="#setup">Сетап</a>
+                <a href="#contact">Связь</a>
+            </nav>
+            <div class="socials">
+                <button id="theme-toggle" title="Сменить тему">🌙</button>
+                <div id="music-toggle" title="Включить/Выключить музыку">
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>@onozis</h1>
+            <p>Пишу код, ломаю системы, экспериментирую с железом. Если есть идеи — пиши.</p>
+            <div class="hero-buttons">
+                <a href="https://t.me/onozis" target="_blank" class="btn-primary">Написать в Telegram ↗</a>
+                <a href="#projects" class="btn-secondary">Проекты</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Проекты</h2>
+                <div class="card">
+                <h3>Neon Snake (Игра)</h3>
+                <p>Классическая змейка на HTML5 Canvas с неоновой графикой, поддержкой свайпов для телефона и сохранением рекорда в браузере.</p>
+                <a href="snake/index.html" class="btn-primary" style="display: inline-block; margin-top: 15px;">Играть</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Обо мне</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Профиль</h3>
+                    <ul>
+                        <li>Имя: Александр</li>
+                        <li>Регион: Россия, Камень-на-Оби</li>
+                        <li>Время: <span id="time">--:--:--</span> (MSK+4)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Стек</h3>
+                    <ul>
+                        <li>Язык: Python (учу)</li>
+                        <li>База: Скрипты, логика, ООП</li>
+                        <li>Статус: Активное обучение</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Спорт</h3>
+                    <ul>
+                        <li>Дисциплина: Баскетбол</li>
+                        <li>Формат: Кардио • Плавание • Бег</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Железо</h3>
+                    <ul>
+                        <li>ПК: Ryzen 5 8400F, RTX 5050</li>
+                        <li>Периферия: AULA F75, Attack Shark X3</li>
+                        <li>Телефон: Samsung A15 4G</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="setup">
+            <h2>Сетап</h2>
+            <div class="card">
+                <h3>Рабочее место & Девайсы</h3>
+                <p>Моя конфигурация для учебы, написания кода и игр.</p>
+                <ul>
+                    <li>Клавиатура: AULA F75</li>
+                    <li>Мышь: Attack Shark X3</li>
+                    <li>Процессор: Ryzen 5 8400F</li>
+                    <li>Видеокарта: RTX 5050</li>
+                    <li>Смартфон: Samsung A15 4G</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Связь</h2>
+            <div class="social-links">
+                <a href="https://t.me/onozis" target="_blank" class="social-link-card">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                    Telegram
+                </a>
+                <a href="https://www.youtube.com/@Просто_Саня333" target="_blank" class="social-link-card">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
+                    YouTube
+                </a>
+                <!-- Новая иконка FunPay -->
+                <a href="https://funpay.com/users/15715760/" target="_blank" class="social-link-card">
+                    <div class="funpay-icon">F</div>
+                    FunPay
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 @onozis. Сделано вручную.</p>
+        </footer>
+    </main>
+
+    <audio id="bg-music" loop>
+        <source src="track.mp3" type="audio/mpeg"> 
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
